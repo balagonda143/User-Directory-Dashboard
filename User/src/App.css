@@ -1,0 +1,130 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+  overflow-x: hidden;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* TITLE */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* SEARCH */
+.search-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.search-input:focus {
+  border-color: #4a90e2;
+}
+
+/* TABLE */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background: #4a90e2;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  cursor: pointer;
+}
+
+.table-row:hover {
+  background: #f1f7ff;
+  cursor: pointer;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 1.8;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* LOADING */
+.loading {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  h2 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  thead {
+    display: none;
+  }
+
+  table, tbody, tr, td {
+    display: block;
+    width: 100%;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  td {
+    padding: 10px;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+
+  td:nth-child(1)::before { content: "Name"; }
+  td:nth-child(2)::before { content: "Email"; }
+  td:nth-child(3)::before { content: "Phone"; }
+  td:nth-child(4)::before { content: "Company"; }
+}
